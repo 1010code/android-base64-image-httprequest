@@ -2,6 +2,7 @@
 
 
 ## OkHttp GET
+提供兩種不同寫法。如果要在回傳結果同時渲染更新view，必須要使用 runOnUiThread。
 
 - Call Function
 ```java
