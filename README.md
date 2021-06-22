@@ -1,5 +1,14 @@
 
+## Bitmap Image convert to base64 Image
 
+```java
+// Bitmap to Base64 String conversion
+Bitmap bitmap = BitMapKeeper.getInstance().getBitmap();
+ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+bitmap.compress(Bitmap.CompressFormat.JPEG, 76, outputStream);
+byte[] byteArray = outputStream.toByteArray();
+String encodedString = Base64.encodeToString(byteArray, Base64.DEFAULT);
+```
 
 ## OkHttp GET
 提供兩種不同寫法。如果要在回傳結果同時渲染更新view，必須要使用 runOnUiThread。
